@@ -1,0 +1,120 @@
+<!-- About page template -->
+<!-- Similar structure to home page -->
+<!-- But with different content -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta tags -->
+    <!-- Same as home page -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page title -->
+    <title>{{ title }}</title>
+
+    <!-- Load static files -->
+    {% load static %}
+
+    <!-- CSS stylesheet -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <!-- Same nav as home page -->
+    <!-- Consistency is important -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- Logo -->
+            <a href="/" class="logo">MyDjangoSite</a>
+
+            <!-- Nav links -->
+            <!-- About is active this time -->
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <!-- This page is active -->
+                <li><a href="/about/" class="active">About</a></li>
+                <li><a href="/contact/">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main content -->
+    <main class="container">
+        <!-- About section -->
+        <!-- Information about the site -->
+        <section class="about-section">
+            <!-- Main heading -->
+            <h1>{{ title }}</h1>
+
+            <!-- Description from context -->
+            <!-- NECESSARY: This comes from the view -->
+            <p class="lead">{{ description }}</p>
+
+            <!-- More information -->
+            <!-- Static content -->
+            <!-- Not from Django context -->
+            <div class="about-content">
+                <!-- Subheading -->
+                <h2>What is this project?</h2>
+
+                <!-- Explanation paragraph -->
+                <!-- Tells users about the project -->
+                <p>
+                    This is a demonstration Django project that showcases how to build
+                    a simple website using Django framework, HTML for structure, CSS for
+                    styling, and JavaScript for interactivity.
+                </p>
+
+                <!-- Another subheading -->
+                <h2>Technologies Used</h2>
+
+                <!-- List of technologies -->
+                <!-- Unordered list -->
+                <!-- Each item is a technology -->
+                <ul class="tech-list">
+                    <!-- Django -->
+                    <li><strong>Django:</strong> Python web framework for backend</li>
+
+                    <!-- HTML -->
+                    <li><strong>HTML:</strong> Structure and content markup</li>
+
+                    <!-- CSS -->
+                    <li><strong>CSS:</strong> Styling and visual design</li>
+
+                    <!-- JavaScript -->
+                    <li><strong>JavaScript:</strong> Client-side interactivity</li>
+                </ul>
+
+                <!-- Yet another subheading -->
+                <h2>About the Comments</h2>
+
+                <!-- Explanation about comments -->
+                <!-- Meta, right? -->
+                <!-- Comments about comments -->
+                <p>
+                    You'll notice this project has a LOT of comments. Some are necessary
+                    and helpful for understanding the code. Others are... well, let's just
+                    say they're there for educational purposes. In real projects, you should
+                    comment your code, but not excessively. Good code should be self-documenting
+                    with clear variable names and structure.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <!-- Same as home page -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2024 MyDjangoSite. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+
+</html>
+<!-- End of about page -->

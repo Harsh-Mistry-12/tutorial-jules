@@ -1,0 +1,175 @@
+<!-- This is the home page template -->
+<!-- It uses HTML, which is a markup language -->
+<!-- HTML stands for HyperText Markup Language -->
+<!DOCTYPE html>
+<html lang="en">
+<!-- The head section contains metadata -->
+<!-- Metadata is data about data -->
+<!-- It's not displayed on the page -->
+<head>
+    <!-- Character encoding - NECESSARY for proper text display -->
+    <meta charset="UTF-8">
+    
+    <!-- Viewport meta tag - NECESSARY for responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Page title - shows in browser tab -->
+    <!-- This uses Django template syntax -->
+    <!-- The double curly braces mean it's a variable -->
+    <title>{{ title }}</title>
+    
+    <!-- Loading static files -->
+    <!-- NECESSARY: This loads Django's static files template tag -->
+    {% load static %}
+    
+    <!-- Link to CSS file -->
+    <!-- This makes the page look pretty -->
+    <!-- Without CSS, it would be plain and boring -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<!-- Body section - this is what users see -->
+<!-- Everything visible goes here -->
+<!-- Comments won't be visible though -->
+<body>
+    <!-- Navigation bar -->
+    <!-- This helps users navigate the site -->
+    <!-- It's at the top of every page -->
+    <nav class="navbar">
+        <!-- Container for nav items -->
+        <!-- Keeps everything organized -->
+        <div class="nav-container">
+            <!-- Site logo/title -->
+            <!-- This is clickable and goes to home -->
+            <a href="/" class="logo">MyDjangoSite</a>
+            
+            <!-- Navigation links -->
+            <!-- These are the main menu items -->
+            <!-- Users click these to go to different pages -->
+            <ul class="nav-links">
+                <!-- Home link -->
+                <!-- This is the current page -->
+                <!-- So it's marked as active -->
+                <li><a href="/" class="active">Home</a></li>
+                
+                <!-- About link -->
+                <!-- Goes to the about page -->
+                <!-- Pretty self-explanatory -->
+                <li><a href="/about/">About</a></li>
+                
+                <!-- Contact link -->
+                <!-- You guessed it - goes to contact page -->
+                <li><a href="/contact/">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Main content area -->
+    <!-- This is where the page content goes -->
+    <!-- It's the most important part -->
+    <main class="container">
+        <!-- Hero section -->
+        <!-- This is the big banner at the top -->
+        <!-- It grabs the user's attention -->
+        <section class="hero">
+            <!-- Main heading -->
+            <!-- H1 is the most important heading -->
+            <!-- There should only be one per page -->
+            <h1>{{ message }}</h1>
+            
+            <!-- Subheading -->
+            <!-- Provides more context -->
+            <!-- H2 is less important than H1 -->
+            <h2>A Simple Django Project with Comments</h2>
+            
+            <!-- Paragraph of text -->
+            <!-- Just some descriptive text -->
+            <!-- Nothing fancy here -->
+            <p>This website demonstrates a Django project with HTML, CSS, and JavaScript.</p>
+            
+            <!-- Call to action button -->
+            <!-- Encourages user interaction -->
+            <!-- Links to the about page -->
+            <a href="/about/" class="btn">Learn More</a>
+        </section>
+        
+        <!-- Features section -->
+        <!-- Shows what the site offers -->
+        <!-- Uses a grid layout -->
+        <section class="features">
+            <!-- Section heading -->
+            <!-- Tells users what this section is about -->
+            <h2>Features</h2>
+            
+            <!-- Features grid -->
+            <!-- Contains individual feature cards -->
+            <!-- Responsive layout -->
+            <div class="features-grid">
+                <!-- Feature card 1 -->
+                <!-- First feature -->
+                <!-- Has icon, title, and description -->
+                <div class="feature-card">
+                    <!-- Icon -->
+                    <!-- Visual representation -->
+                    <div class="icon">🚀</div>
+                    
+                    <!-- Feature title -->
+                    <h3>Fast</h3>
+                    
+                    <!-- Feature description -->
+                    <!-- Explains the feature -->
+                    <p>Built with Django for optimal performance and speed.</p>
+                </div>
+                
+                <!-- Feature card 2 -->
+                <!-- Second feature -->
+                <!-- Same structure as card 1 -->
+                <div class="feature-card">
+                    <!-- Another icon -->
+                    <div class="icon">🎨</div>
+                    
+                    <!-- Title -->
+                    <h3>Beautiful</h3>
+                    
+                    <!-- Description -->
+                    <p>Modern design with CSS animations and effects.</p>
+                </div>
+                
+                <!-- Feature card 3 -->
+                <!-- Third and final feature -->
+                <!-- You get the pattern now -->
+                <div class="feature-card">
+                    <!-- Yet another icon -->
+                    <div class="icon">💡</div>
+                    
+                    <!-- Title -->
+                    <h3>Simple</h3>
+                    
+                    <!-- Description -->
+                    <p>Clean code with lots of helpful comments.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer section -->
+    <!-- Bottom of the page -->
+    <!-- Contains copyright info -->
+    <footer class="footer">
+        <!-- Footer container -->
+        <!-- Centers the content -->
+        <div class="footer-container">
+            <!-- Copyright text -->
+            <!-- NECESSARY: Shows current year using Django template variable -->
+            <p>&copy; {{ year }} MyDjangoSite. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- JavaScript file -->
+    <!-- NECESSARY: Loads our custom JavaScript -->
+    <!-- This adds interactivity to the page -->
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
+<!-- End of HTML file -->
+<!-- That's all folks! -->
