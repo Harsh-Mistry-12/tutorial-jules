@@ -1,683 +1,299 @@
-/* This is the main CSS file */
-/* CSS stands for Cascading Style Sheets */
-/* It makes HTML look pretty */
-
-/* Reset and base styles */
-/* This removes default browser styling */
-/* Helps achieve consistency across browsers */
 * {
-    /* Remove default margin */
-    /* Margin is space outside elements */
     margin: 0;
-    
-    /* Remove default padding */
-    /* Padding is space inside elements */
     padding: 0;
-    
-    /* Border box sizing */
-    /* NECESSARY: Makes width/height calculations easier */
     box-sizing: border-box;
 }
 
-/* Body styles */
-/* Applies to the entire page */
-/* These are inherited by child elements */
 body {
-    /* Font family */
-    /* Sans-serif is clean and modern */
-    /* Falls back to system fonts */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    
-    /* Line height */
-    /* NECESSARY: Improves readability */
-    /* 1.6 is a good standard */
     line-height: 1.6;
-    
-    /* Text color */
-    /* Dark gray instead of pure black */
-    /* Easier on the eyes */
     color: #333;
-    
-    /* Background color */
-    /* Light gray background */
-    /* Not pure white */
     background-color: #f4f4f4;
 }
 
-/* Navigation bar styles */
-/* The top menu bar */
-/* Fixed positioning keeps it at top */
 .navbar {
-    /* Background color */
-    /* Dark blue-gray */
-    /* Professional looking */
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    
-    /* Text color */
-    /* White text on dark background */
     color: white;
-    
-    /* Padding */
-    /* Top/bottom: 1rem, left/right: 0 */
     padding: 1rem 0;
-    
-    /* Box shadow */
-    /* NECESSARY: Adds depth and separation */
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Navigation container */
-/* Centers and constrains width */
 .nav-container {
-    /* Max width */
-    /* Prevents content from being too wide */
     max-width: 1200px;
-    
-    /* Margin auto centers the container */
-    /* NECESSARY: Centers the navigation */
     margin: 0 auto;
-    
-    /* Padding on sides */
-    /* Prevents content from touching edges */
     padding: 0 2rem;
-    
-    /* Flexbox display */
-    /* NECESSARY: For horizontal layout */
     display: flex;
-    
-    /* Space between items */
-    /* Logo on left, links on right */
     justify-content: space-between;
-    
-    /* Vertical alignment */
-    /* Centers items vertically */
     align-items: center;
 }
 
-/* Logo styles */
-/* The site name/logo */
 .logo {
-    /* Font size */
-    /* Larger than normal text */
     font-size: 1.5rem;
-    
-    /* Font weight */
-    /* Bold text */
     font-weight: bold;
-    
-    /* Text color */
-    /* White */
     color: white;
-    
-    /* Remove underline */
-    /* NECESSARY: Links have underlines by default */
     text-decoration: none;
-    
-    /* Transition effect */
-    /* Smooth color change on hover */
     transition: opacity 0.3s;
 }
 
-/* Logo hover effect */
-/* When mouse is over logo */
 .logo:hover {
-    /* Slight transparency */
-    /* Subtle feedback */
     opacity: 0.8;
 }
 
-/* Navigation links list */
-/* The ul element */
 .nav-links {
-    /* Flexbox for horizontal layout */
     display: flex;
-    
-    /* Remove list bullets */
-    /* NECESSARY: Lists have bullets by default */
     list-style: none;
-    
-    /* Gap between items */
-    /* Spacing between links */
     gap: 2rem;
 }
 
-/* Navigation link items */
-/* Individual links */
 .nav-links a {
-    /* Text color */
-    /* White */
     color: white;
-    
-    /* Remove underline */
     text-decoration: none;
-    
-    /* Transition */
-    /* Smooth effect on hover */
     transition: all 0.3s;
-    
-    /* Padding */
-    /* Makes clickable area larger */
     padding: 0.5rem 1rem;
-    
-    /* Border radius */
-    /* Rounded corners */
     border-radius: 5px;
 }
 
-/* Link hover effect */
-/* When mouse hovers over link */
 .nav-links a:hover {
-    /* Background color */
-    /* Semi-transparent white */
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Active link */
-/* Current page link */
-/* NECESSARY: Shows user which page they're on */
 .nav-links a.active {
-    /* Background color */
-    /* More opaque than hover */
     background-color: rgba(255, 255, 255, 0.2);
-    
-    /* Font weight */
-    /* Makes it stand out */
     font-weight: bold;
 }
 
-/* Container for main content */
-/* Centers and constrains width */
 .container {
-    /* Max width */
-    /* Same as nav container */
     max-width: 1200px;
-    
-    /* Center the container */
     margin: 0 auto;
-    
-    /* Padding */
-    /* Space around content */
     padding: 2rem;
 }
 
-/* Hero section */
-/* Big banner at top of home page */
 .hero {
-    /* Text alignment */
-    /* Center all text */
     text-align: center;
-    
-    /* Padding */
-    /* Lots of vertical space */
     padding: 4rem 2rem;
-    
-    /* Background */
-    /* White background */
     background: white;
-    
-    /* Border radius */
-    /* Rounded corners */
     border-radius: 10px;
-    
-    /* Box shadow */
-    /* NECESSARY: Adds depth */
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    
-    /* Margin bottom */
-    /* Space below hero */
     margin-bottom: 3rem;
 }
 
-/* Hero heading */
-/* Main title */
 .hero h1 {
-    /* Font size */
-    /* Very large */
     font-size: 3rem;
-    
-    /* Margin bottom */
-    /* Space below heading */
     margin-bottom: 1rem;
-    
-    /* Text color */
-    /* Gradient text color */
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    
-    /* Clip text */
-    /* NECESSARY: Makes gradient show on text */
     -webkit-background-clip: text;
     background-clip: text;
-    
-    /* Transparent text */
-    /* Shows gradient background */
     -webkit-text-fill-color: transparent;
 }
 
-/* Hero subheading */
 .hero h2 {
-    /* Font size */
-    /* Smaller than h1 */
     font-size: 1.5rem;
-    
-    /* Color */
-    /* Gray */
     color: #666;
-    
-    /* Margin bottom */
     margin-bottom: 1rem;
 }
 
-/* Hero paragraph */
 .hero p {
-    /* Font size */
-    /* Slightly larger than normal */
     font-size: 1.1rem;
-    
-    /* Color */
     color: #777;
-    
-    /* Margin bottom */
     margin-bottom: 2rem;
 }
 
-/* Button styles */
-/* Call to action buttons */
 .btn {
-    /* Display */
-    /* Inline block for padding */
     display: inline-block;
-    
-    /* Padding */
-    /* Vertical and horizontal */
     padding: 0.8rem 2rem;
-    
-    /* Background */
-    /* Gradient background */
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    
-    /* Text color */
-    /* White text */
     color: white;
-    
-    /* Remove underline */
     text-decoration: none;
-    
-    /* Border radius */
-    /* Rounded button */
     border-radius: 25px;
-    
-    /* Transition */
-    /* NECESSARY: Smooth hover effect */
     transition: transform 0.3s, box-shadow 0.3s;
-    
-    /* Font weight */
     font-weight: bold;
 }
 
-/* Button hover effect */
-/* When mouse hovers */
 .btn:hover {
-    /* Transform */
-    /* Slightly larger */
     transform: translateY(-2px);
-    
-    /* Box shadow */
-    /* Adds shadow on hover */
     box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
 }
 
-/* Features section */
 .features {
-    /* Margin top */
     margin-top: 3rem;
 }
 
-/* Features heading */
 .features h2 {
-    /* Text align */
-    /* Center the heading */
     text-align: center;
-    
-    /* Font size */
     font-size: 2.5rem;
-    
-    /* Margin bottom */
     margin-bottom: 2rem;
 }
 
-/* Features grid */
-/* Container for feature cards */
-/* NECESSARY: Creates responsive grid layout */
 .features-grid {
-    /* Grid display */
     display: grid;
-    
-    /* Grid columns */
-    /* Three equal columns */
-    /* Responsive - adjusts on small screens */
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    
-    /* Gap between cards */
     gap: 2rem;
 }
 
-/* Feature card */
-/* Individual feature box */
 .feature-card {
-    /* Background */
-    /* White background */
     background: white;
-    
-    /* Padding */
     padding: 2rem;
-    
-    /* Border radius */
     border-radius: 10px;
-    
-    /* Text alignment */
     text-align: center;
-    
-    /* Box shadow */
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    
-    /* Transition */
-    /* NECESSARY: Smooth hover animation */
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Feature card hover */
-/* Hover effect */
 .feature-card:hover {
-    /* Transform */
-    /* Move up slightly */
     transform: translateY(-5px);
-    
-    /* Box shadow */
-    /* Larger shadow */
     box-shadow: 0 5px 20px rgba(0,0,0,0.15);
 }
 
-/* Feature icon */
 .feature-card .icon {
-    /* Font size */
-    /* Large emoji */
     font-size: 3rem;
-    
-    /* Margin bottom */
     margin-bottom: 1rem;
 }
 
-/* Feature title */
 .feature-card h3 {
-    /* Margin bottom */
     margin-bottom: 1rem;
-    
-    /* Color */
     color: #667eea;
 }
 
-/* About section */
 .about-section {
-    /* Background */
     background: white;
-    
-    /* Padding */
     padding: 3rem;
-    
-    /* Border radius */
     border-radius: 10px;
-    
-    /* Box shadow */
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-/* Lead paragraph */
-/* Intro text */
 .lead {
-    /* Font size */
-    /* Larger than normal */
     font-size: 1.3rem;
-    
-    /* Color */
     color: #666;
-    
-    /* Margin bottom */
     margin-bottom: 2rem;
 }
 
-/* About content */
 .about-content h2 {
-    /* Margin top */
     margin-top: 2rem;
-    
-    /* Margin bottom */
     margin-bottom: 1rem;
-    
-    /* Color */
     color: #667eea;
 }
 
-/* Tech list */
 .tech-list {
-    /* Margin left */
-    /* Indent the list */
     margin-left: 2rem;
-    
-    /* Margin bottom */
     margin-bottom: 1rem;
 }
 
-/* Tech list items */
 .tech-list li {
-    /* Margin bottom */
-    /* Space between items */
     margin-bottom: 0.5rem;
 }
 
-/* Contact section */
 .contact-section {
-    /* Background */
     background: white;
-    
-    /* Padding */
     padding: 3rem;
-    
-    /* Border radius */
     border-radius: 10px;
-    
-    /* Box shadow */
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-/* Contact info container */
 .contact-info {
-    /* Display */
-    /* Grid layout */
     display: grid;
-    
-    /* Grid columns */
-    /* Three columns */
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    
-    /* Gap */
     gap: 2rem;
-    
-    /* Margin */
     margin: 2rem 0;
 }
 
-/* Contact item */
 .contact-item {
-    /* Text align */
     text-align: center;
-    
-    /* Padding */
     padding: 1.5rem;
-    
-    /* Background */
     background: #f8f9fa;
-    
-    /* Border radius */
     border-radius: 10px;
 }
 
-/* Contact icon */
 .contact-item .icon {
-    /* Font size */
     font-size: 2.5rem;
-    
-    /* Margin bottom */
     margin-bottom: 1rem;
 }
 
-/* Contact form container */
 .contact-form-container {
-    /* Margin top */
     margin-top: 3rem;
 }
 
-/* Contact form */
 .contact-form {
-    /* Max width */
-    /* Not too wide */
     max-width: 600px;
-    
-    /* Margin */
-    /* Center the form */
     margin: 2rem auto;
 }
 
-/* Form group */
-/* Container for each input */
 .form-group {
-    /* Margin bottom */
-    /* Space between inputs */
     margin-bottom: 1.5rem;
 }
 
-/* Form labels */
 .form-group label {
-    /* Display */
-    /* Block for full width */
     display: block;
-    
-    /* Margin bottom */
     margin-bottom: 0.5rem;
-    
-    /* Font weight */
     font-weight: bold;
-    
-    /* Color */
     color: #333;
 }
 
-/* Form inputs and textarea */
-/* NECESSARY: Styles all form inputs */
 .form-group input,
 .form-group textarea {
-    /* Width */
-    /* Full width */
     width: 100%;
-    
-    /* Padding */
     padding: 0.8rem;
-    
-    /* Border */
     border: 1px solid #ddd;
-    
-    /* Border radius */
     border-radius: 5px;
-    
-    /* Font size */
     font-size: 1rem;
-    
-    /* Font family */
-    /* Inherit from body */
     font-family: inherit;
-    
-    /* Transition */
     transition: border-color 0.3s;
 }
 
-/* Input focus */
-/* When input is clicked */
 .form-group input:focus,
 .form-group textarea:focus {
-    /* Outline */
-    /* Remove default outline */
     outline: none;
-    
-    /* Border color */
-    /* NECESSARY: Shows input is active */
     border-color: #667eea;
 }
 
-/* Footer */
-/* Bottom of page */
 .footer {
-    /* Background */
     background: #333;
-    
-    /* Color */
     color: white;
-    
-    /* Padding */
     padding: 2rem 0;
-    
-    /* Margin top */
     margin-top: 3rem;
-    
-    /* Text align */
     text-align: center;
 }
 
-/* Footer container */
 .footer-container {
-    /* Max width */
     max-width: 1200px;
-    
-    /* Margin */
     margin: 0 auto;
-    
-    /* Padding */
     padding: 0 2rem;
 }
 
-/* Responsive design */
-/* For smaller screens */
-/* NECESSARY: Makes site work on mobile */
+#scrollTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    font-size: 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    z-index: 1000;
+    transition: opacity 0.3s;
+}
+
+#scrollTopBtn:hover {
+    opacity: 0.8;
+}
+
 @media (max-width: 768px) {
-    /* Navigation container */
-    /* Stack items vertically */
     .nav-container {
-        /* Flex direction */
         flex-direction: column;
-        
-        /* Gap */
         gap: 1rem;
     }
     
-    /* Hero heading */
-    /* Smaller on mobile */
     .hero h1 {
-        /* Font size */
         font-size: 2rem;
     }
     
-    /* Hero subheading */
     .hero h2 {
-        /* Font size */
         font-size: 1.2rem;
     }
     
-    /* Features grid */
-    /* Single column on mobile */
     .features-grid {
-        /* Grid columns */
         grid-template-columns: 1fr;
     }
 }
-
-/* End of CSS file */
-/* That's a lot of comments! */
-/* But now you understand everything */

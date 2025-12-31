@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'mainapp',  # Our main application
+    'mainapp',
 ]
 
 MIDDLEWARE = [
@@ -59,6 +59,7 @@ TEMPLATES = [
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
+                'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
@@ -117,7 +118,6 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-# NECESSARY: This tells Django where to find static files
 STATICFILES_DIRS = [
     BASE_DIR / 'static',
 ]
