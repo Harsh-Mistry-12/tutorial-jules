@@ -1,164 +1,73 @@
-<!-- Contact page template -->
-<!-- For contact information -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <!-- Standard meta tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Title -->
     <title>{{ title }}</title>
-
-    <!-- Static files -->
     {% load static %}
-
-    <!-- Stylesheet -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
-
 <body>
-    <!-- Navigation bar -->
     <nav class="navbar">
         <div class="nav-container">
-            <!-- Logo -->
             <a href="/" class="logo">MyDjangoSite</a>
-
-            <!-- Navigation links -->
-            <!-- Contact is active -->
             <ul class="nav-links">
                 <li><a href="/">Home</a></li>
                 <li><a href="/about/">About</a></li>
-                <!-- Active page -->
                 <li><a href="/contact/" class="active">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Main content -->
     <main class="container">
-        <!-- Contact section -->
         <section class="contact-section">
-            <!-- Page heading -->
             <h1>{{ title }}</h1>
-
-            <!-- Introduction text -->
             <p class="lead">Get in touch with us!</p>
-
-            <!-- Contact information -->
-            <!-- This comes from the view context -->
             <div class="contact-info">
-                <!-- Email section -->
-                <!-- Shows email address -->
                 <div class="contact-item">
-                    <!-- Icon -->
                     <div class="icon">📧</div>
-
-                    <!-- Label -->
                     <h3>Email</h3>
-
-                    <!-- Email address -->
-                    <!-- NECESSARY: This variable comes from Django view -->
                     <p>{{ email }}</p>
                 </div>
-
-                <!-- Phone section -->
-                <!-- Shows phone number -->
                 <div class="contact-item">
-                    <!-- Icon -->
                     <div class="icon">📱</div>
-
-                    <!-- Label -->
                     <h3>Phone</h3>
-
-                    <!-- Phone number -->
-                    <!-- NECESSARY: From Django context -->
                     <p>{{ phone }}</p>
                 </div>
-
-                <!-- Location section -->
-                <!-- Shows address -->
                 <div class="contact-item">
-                    <!-- Icon -->
                     <div class="icon">📍</div>
-
-                    <!-- Label -->
                     <h3>Location</h3>
-
-                    <!-- Address -->
-                    <!-- This is hardcoded -->
-                    <!-- Not from Django context -->
                     <p>123 Django Street, Python City</p>
                 </div>
             </div>
 
-            <!-- Contact form -->
-            <!-- For sending messages -->
-            <!-- This is just a demo form -->
             <div class="contact-form-container">
-                <!-- Form heading -->
                 <h2>Send us a message</h2>
-
-                <!-- The actual form -->
-                <!-- Action is empty - form doesn't submit anywhere -->
-                <!-- This is just for demonstration -->
                 <form class="contact-form" id="contactForm">
-                    <!-- Name input -->
-                    <!-- User enters their name -->
                     <div class="form-group">
-                        <!-- Label for name -->
                         <label for="name">Name</label>
-
-                        <!-- Input field -->
-                        <!-- Type is text -->
-                        <!-- Required means it must be filled -->
                         <input type="text" id="name" name="name" required>
                     </div>
-
-                    <!-- Email input -->
-                    <!-- User enters their email -->
                     <div class="form-group">
-                        <!-- Label -->
                         <label for="email">Email</label>
-
-                        <!-- Input field -->
-                        <!-- Type is email for validation -->
                         <input type="email" id="email" name="email" required>
                     </div>
-
-                    <!-- Message textarea -->
-                    <!-- For longer text input -->
                     <div class="form-group">
-                        <!-- Label -->
                         <label for="message">Message</label>
-
-                        <!-- Textarea -->
-                        <!-- Allows multiple lines -->
-                        <!-- Rows attribute sets height -->
                         <textarea id="message" name="message" rows="5" required></textarea>
                     </div>
-
-                    <!-- Submit button -->
-                    <!-- Sends the form -->
-                    <!-- Type submit is important -->
                     <button type="submit" class="btn">Send Message</button>
                 </form>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="footer-container">
             <p>&copy; 2024 MyDjangoSite. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- JavaScript -->
-    <!-- Handles form submission -->
     <script src="{% static 'js/script.js' %}"></script>
 </body>
-
 </html>
-<!-- End of contact page -->
